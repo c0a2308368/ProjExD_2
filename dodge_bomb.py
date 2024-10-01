@@ -30,15 +30,17 @@ def check_bound(obj_rct:pg.Rect) -> tuple[bool,bool]:
 
 
 def game_over(screen):
+
+
     bo_img = pg.Surface((WIDTH,HEIGHT))
-    pg.draw.rect(bo_img,(0,0,0),pg.Rect(0,0,WIDTH,HEIGHT))
+    pg.draw.rect(bo_img,(0,0,0),pg.Rect(0,0,WIDTH,HEIGHT)) 
     bo_img.set_alpha(125)
-    kk_img = pg.transform.rotozoom(pg.image.load("fig/8.png"),0,1.0)
+    kk_img = pg.transform.rotozoom(pg.image.load("fig/8.png"),0,1.0) #こうかとんの表示
     kk_rct = kk_img.get_rect()
-    kk_rct.center = 350,350
-    kk2_img = pg.transform.rotozoom(pg.image.load("fig/8.png"),0,1.0)
+    kk_rct.center = 350,350 #こうかとんの位置
+    kk2_img = pg.transform.rotozoom(pg.image.load("fig/8.png"),0,1.0) #こうかとんの表示
     kk2_rct = kk2_img.get_rect()
-    kk2_rct.center = 760,350
+    kk2_rct.center = 760,350 #こうかとんの位置
     fonto = pg.font.Font(None,80)
     txt = fonto.render("Game Over",True,(255,255,255))
     screen.blit(bo_img,[0,0])
