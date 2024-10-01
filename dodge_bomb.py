@@ -35,14 +35,14 @@ def game_over(screen):
     bo_img.set_alpha(125)
     kk_img = pg.transform.rotozoom(pg.image.load("fig/8.png"),0,1.0)
     kk_rct = kk_img.get_rect()
-    kk_rct.center = 320, 320
+    kk_rct.center = 350,350
     kk2_img = pg.transform.rotozoom(pg.image.load("fig/8.png"),0,1.0)
     kk2_rct = kk2_img.get_rect()
-    kk2_rct.center = 710,320
+    kk2_rct.center = 760,350
     fonto = pg.font.Font(None,80)
     txt = fonto.render("Game Over",True,(255,255,255))
     screen.blit(bo_img,[0,0])
-    screen.blit(txt,[360,300])
+    screen.blit(txt,[400,HEIGHT/2])
     screen.blit(kk_img,kk_rct)
     screen.blit(kk2_img,kk2_rct)
     pg.display.update()
